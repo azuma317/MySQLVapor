@@ -18,4 +18,11 @@ final class UserController {
             }
         }
     }
+    
+    func upload(_ req: Request) throws -> Future<String> {
+        return try req.content.decode(File.self).map(to: String.self, { (image) in
+            try image.data.write(to: URL(string: "/Users/macintosh/Documents/vapor/images/sample.png")!)
+            return "file upload"
+        })
+    }
 }

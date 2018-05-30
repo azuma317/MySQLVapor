@@ -25,7 +25,7 @@ public func configure(
         hostname: "127.0.0.1",
         port: 3306,
         username: "root",
-        password: "root",
+        password: "zhiazu",
         database: "mycooldb"
     )
     services.register(mysqlConfig)
